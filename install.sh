@@ -20,6 +20,6 @@
 set -o nounset                                  # Treat unset variables as an error
 
 apt update -y
-whereis python &> /dev/null
+which python &> /dev/null
 if [ $? != 0 ]; then apt install python -y; fi
 pip install amino.py
